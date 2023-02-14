@@ -57,10 +57,10 @@ class E,F mysubscripts
 
  The purpose of <span style='color:#BDEDF2'> `01_tissueborders` </span> is to extract the contours of the tissue in question. This is important for removing unwanted cell locations outside of the tissue boundary which are not wanted for the spatial-modelling process. The output of this script is a geo-pandas dataframe of 2d contours, one for each z-layer within the image (see example below)
 
- ![Example of image contours from a sample of bone](./figures/contours_exampld.jpg)
+ ![Example of image contours from a sample of bone](./figures/contours_example.jpg)
 
 To then generate a set of 3D predictions we've organised the scripts in such a way that each step is as clear as possible. In <span style='color:#BDEDF2'> `02_sort2DNNdata (Sort/Arrange 02)` </span> we demonstrate how we order the output from the 2D neural networks by size and flourescence intensity. Because this requires referring back to the original image, we have created a specific script to show how this can be done. One this is done, <span style='color:#BDEDF2'> `03_generate3dpredictions` </span>  contains the script for generating the 3D predictions. 
 
-![Example of 3D cell predictions (red: leukaemia, green: T cells, blue: megakarocytes)](./figures/predictedcelllocations.png)
+![Example of 3D cell predictions (red: leukaemia, green: T cells, blue: megakarocytes)](./figures/predictedcelllocations.jpg)
 
 To then run the _spatially weighted regression models_ on this data we use the output from <span style='color:#BDEDF2'> `03_generate3dpredictions` </span> along with the contour data ( from <span style='color:#BDEDF2'> `01_tissueborders` </span> ) to create a regular grid made up of $n \times n \times n$ grid-cells in which cell numbers are calculated. We then run our spatial models using scripts shown in <span style='color:#BDEDF2'> `05_spatial_analysis` </span> .
