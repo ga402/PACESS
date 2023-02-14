@@ -64,3 +64,5 @@ To then generate a set of 3D predictions we've organised the scripts in such a w
 ![Example of 3D cell predictions (red: leukaemia, green: T cells, blue: megakarocytes)](./figures/predictedcelllocations.jpg)
 
 To then run the _spatially weighted regression models_ on this data we use the output from <span style='color:#BDEDF2'> `03_generate3dpredictions` </span> along with the contour data ( from <span style='color:#BDEDF2'> `01_tissueborders` </span> ) to create a regular grid made up of $n \times n \times n$ grid-cells in which cell numbers are calculated. We then run our spatial models using scripts shown in <span style='color:#BDEDF2'> `05_spatial_analysis` </span> .
+
+![Example output from spatially-weighted regression model](./figures/figure.jpg)
