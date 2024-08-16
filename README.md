@@ -16,7 +16,8 @@ To give an understanding of how to The order of use of these scripts is shown in
     ├── 04_generate3dSpatialDataframe
     └── 05_spatial_analysis
         ├── spatial_analysis_examples
-        └── spatially_weighted_regression_model
+        ├── spatial_visualisation
+        └── spatially_weighted_regression 
 ```
 
 ## Steps
