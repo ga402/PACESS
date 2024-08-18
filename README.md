@@ -15,9 +15,8 @@ To give an understanding of how to The order of use of these scripts is shown in
     ├── 03_generate3dpredictions
     ├── 04_generate3dSpatialDataframe
     └── 05_spatial_analysis
-        ├── spatial_analysis_examples
-        ├── spatial_visualisation
-        └── spatially_weighted_regression 
+        ├── spatial_regression
+        └── spatially_visualisation 
 ```
 
 ## Steps
@@ -74,6 +73,6 @@ To then generate a set of 3D predictions we've organised the scripts in such a w
 
 ![Example of 3D cell predictions (red: leukaemia, green: T cells, blue: megakarocytes)](./figures/predictedcelllocations.jpg)
 
-To then run the _spatially weighted regression models_ on this data we use the output from <span style='color:#BDEDF2'> `03_generate3dpredictions` </span> along with the contour data ( from <span style='color:#BDEDF2'> `01_tissueborders` </span> ) to create a regular grid made up of $n \times n \times n$ grid-cells in which cell numbers are calculated. We then run our spatial models/analysis using scripts shown in <span style='color:#BDEDF2'> `05_spatial_analysis` </span> .
+To then run the _spatially regression models_ on this data we use the output from <span style='color:#BDEDF2'> `03_generate3dpredictions` </span> along with the contour data ( from <span style='color:#BDEDF2'> `01_tissueborders` </span> ) to create a regular grid made up of $n \times n \times n$ grid-cells in which cell numbers are calculated. We then run our spatial models/analysis using scripts shown in <span style='color:#BDEDF2'> `05_spatial_analysis` </span> .
 
 ![Example of cluster regions](./figures/figure4G.png)
