@@ -10,6 +10,8 @@ INFILE=input.csv
 OUTFILE=output.csv
 UTILS_FILE=getDistancesUtils.jl
 
+python main.py --file $INFILE --output $OUTFILE --pixelsXYZ 0.87 0.87 5 --cells 0 2 4 --intensity_match c2 c4 c0
 
-julia getDistancesNEW.jl --file $INFILE --output $OUTFILE --pixelsXYZ 0.414321 0.414321 5 --cells 0 2 4 --intensity_match "c2" "c4" "c0"
+
+
 

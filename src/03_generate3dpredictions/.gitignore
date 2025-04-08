@@ -1,0 +1,6 @@
+*.c
+*.so
+*.jl
+*.csv
+build/
+_old_run.sh
